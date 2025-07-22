@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CanSecTec</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      background-color: #1a1a2e; /* overscroll color */
+      height: 100%; /* ensure it stretches */
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9; /* main page color */
+      color: #1a1a1a;
+      min-height: 100%; /* ensure it fills html */
+    }
+    header {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+    nav {
+      background: #2a5bde;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #2a5bde;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CanSecTec</h1>
+    <p>Empowering Tech. Everywhere.</p>
+  </header>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Residential Tech Support</h3>
+        <p>Comprehensive help for your home tech, devices, and setup.</p>
+      </div>
+      <div class="card">
+        <h3>Small Business IT & Security</h3>
+        <p>Secure IT systems, device management, and business support.</p>
+      </div>
+      <div class="card">
+        <h3>App Development</h3>
+        <p>Custom applications for desktop, mobile, or business workflow.</p>
+      </div>
+      <div class="card">
+        <h3>Crypto & Insights</h3>
+        <p>Coming soon — trading updates and blockchain tech guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About CanSecTec</h2>
+    <p>CanSecTec combines local trust with modern technology services, helping homes and businesses stay secure and ahead of the curve.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="5" placeholder="Message"></textarea>
+      <button type="submit">Request Support</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2024 CanSecTec. All rights reserved.
+  </footer>
+</body>
+</html>
