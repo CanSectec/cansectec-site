@@ -19,6 +19,14 @@
       color: #1a1a1a;
       min-height: 100%;
     }
+    .page-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .content {
+      flex: 1;
+    }
     header {
       background-color: #1a1a2e;
       color: white;
@@ -86,28 +94,33 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>CanSecTec</h1>
-    <p>Empowering Tech. Everywhere.</p>
-  </header>
-  <nav>
-    <a href="index.html">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="page-wrapper">
+    <header>
+      <h1>CanSecTec</h1>
+      <p>Empowering Tech. Everywhere.</p>
+    </header>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button type="submit">Request Support</button>
-    </form>
-  </section>
+    <nav>
+      <a href="index.html">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <footer>
-    &copy; 2024 CanSecTec. All rights reserved.
-  </footer>
+    <main class="content">
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea rows="5" placeholder="Message"></textarea>
+          <button type="submit">Request Support</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2024 CanSecTec. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
