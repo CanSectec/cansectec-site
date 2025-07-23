@@ -91,6 +91,10 @@
       border-radius: 4px;
       cursor: pointer;
     }
+    #form-status {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -109,12 +113,13 @@
     <main class="content">
       <section id="contact">
         <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/mwpqlqkg" method="POST">
+        <form id="contact-form">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
           <textarea name="message" rows="5" placeholder="Message" required></textarea>
           <button type="submit">Request Support</button>
         </form>
+        <p id="form-status" style="display: none;"></p>
       </section>
     </main>
 
@@ -122,5 +127,39 @@
       &copy; 2024 CanSecTec. All rights reserved.
     </footer>
   </div>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://formspree.io/f/mwpqlqkg", {
+          method: "POST",
+          headers: {
+            Accept: "application/json"
+          },
+          body: formData
+        });
+
+        if (response.ok) {
+          form.reset();
+          status.style.display = "block";
+          status.style.color = "green";
+          status.textContent = "Your message has been sent. We'll be in touch soon.";
+        } else {
+          throw new Error("Form submission failed.");
+        }
+      } catch (error) {
+        status.style.display = "block";
+        status.style.color = "red";
+        status.textContent = "Something went wrong. Please try again later.";
+      }
+    });
+  </script>
 </body>
 </html>
